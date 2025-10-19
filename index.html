@@ -1,62 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beeline Learn | AI Workforce Performance Platform</title>
-  <meta name="description" content="Beeline Learn transforms how companies train and perform. We help businesses see what their people know, where the gaps are, and automatically close them through personalised micro-training and AI-powered coaching." />
-  <link rel="icon" href="https://beeline.life/favicons/favicon.ico" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(180deg, #fefefe, #f7f9fc);
-      color: #111;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-weight: 400;
-      color: #555;
-      margin-top: 0;
-    }
-    .btn {
-      display: inline-block;
-      background: #ffb100;
-      color: #000;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1.5rem;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .btn:hover {
-      background: #ffd24c;
-    }
-    footer {
-      font-size: 0.8rem;
-      color: #777;
-      position: absolute;
-      bottom: 15px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Beeline Learn</h1>
-  <h2>AI Workforce Performance Platform</h2>
-  <p>We help companies see what their people know, where the gaps are, and automatically close them.<br>
-  Personalised, outcome-driven training that fits right into daily work — via WhatsApp, web, or mobile.</p>
-  <a href="https://beeline.life" target="_blank" class="btn">Visit Main Site</a>
-  <footer>© 2025 Beeline Learn (Pty) Ltd — Cape Town, South Africa</footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beeline Learn | Workforce Intelligence Software</title>
+    <meta
+      name="description"
+      content="Beeline is workforce intelligence software that shows what your people can do, where the gaps are, and automatically helps them get better. AI coaching, real-time skill mapping, and measurable performance—delivered through WhatsApp, Teams, and web."
+    />
+    <link rel="icon" href="https://beeline.life/favicons/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', sans-serif; background: #fafafa; color: #111; }
+      .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+      .visible { opacity: 1; transform: translateY(0); }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="w-full py-4 bg-yellow-400 text-center font-semibold text-sm">
+      🚀 Beeline Learn — Our new site for 2026. You’re early. Explore below.
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="flex-1 flex flex-col justify-center items-center text-center px-6 py-20">
+      <h1 class="text-4xl md:text-5xl font-bold mb-3 fade-in">Every employee gets an AI coach.</h1>
+      <p class="text-lg md:text-xl text-gray-600 mb-8 fade-in" style="transition-delay:0.2s">
+        Delivered in WhatsApp, Teams, or web. 90% completion. Proof of capability.
+      </p>
+      <div class="flex gap-4 fade-in" style="transition-delay:0.4s">
+        <a href="https://beeline.life" target="_blank"
+          class="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition">
+          Visit Main Platform
+        </a>
+        <a href="https://beeline.life/#demo" target="_blank"
+          class="bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition">
+          Book a Demo
+        </a>
+      </div>
+    </section>
+
+    <!-- What We Do -->
+    <section id="about" class="max-w-4xl mx-auto text-center px-6 py-20 fade-in">
+      <h2 class="text-3xl font-bold mb-4">What Beeline Does</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Beeline is workforce intelligence software that shows you exactly what your people know and can do—right now.
+        It creates a live skills profile for every employee, tracking competencies, performance gaps, and readiness across your organisation.
+        When gaps appear, the system automatically delivers personalised micro-training through WhatsApp or Teams to close them.
+        Leaders get a real-time capability map of their workforce; employees get a personal trainer in their pocket that makes them better at their jobs, five minutes at a time.
+      </p>
+    </section>
+
+    <!-- 3 Value Blocks -->
+    <section id="value" class="bg-white py-20">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
+        <div class="fade-in">
+          <h3 class="font-semibold text-xl mb-2">Completion that sticks</h3>
+          <p class="text-gray-600">Five-minute WhatsApp lessons, frictionless rollout, and 90% engagement.</p>
+        </div>
+        <div class="fade-in">
+          <h3 class="font-semibold text-xl mb-2">Proof of capability</h3>
+          <p class="text-gray-600">Live skill profiles and manager validations—evidence, not guesses.</p>
+        </div>
+        <div class="fade-in">
+          <h3 class="font-semibold text-xl mb-2">Personal coaching</h3>
+          <p class="text-gray-600">AI-tailored next steps that build real-world performance, every day.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-20 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-3">Train where work happens. Prove it in your KPIs.</h2>
+      <p class="text-gray-700 mb-6">Ready to make training that moves the numbers?</p>
+      <a href="https://beeline.life/#demo" target="_blank"
+        class="bg-yellow-400 text-black px-8 py-4 rounded-md font-semibold hover:bg-yellow-500 transition">
+        See Beeline in Action
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 text-center py-6 text-sm text-gray-600 border-t">
+      © 2025 Beeline Learn (Pty) Ltd — Cape Town, South Africa
+    </footer>
+
+    <!-- Scroll Animations -->
+    <script>
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      elements.forEach(el => observer.observe(el));
+    </script>
+  </body>
 </html>
