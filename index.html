@@ -4,20 +4,20 @@
   <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beeline Learn — Every employee gets an AI coach</title>
-  <meta name="description" content="Beeline is workforce intelligence software that shows what your people can do, where the gaps are, and automatically helps them get better—delivered in WhatsApp, Teams, and web, with proof that shows up in your KPIs." />
+  <title>Beeline Learn — Workforce Intelligence & Daily AI Coaching</title>
+  <meta name="description" content="Beeline gives leaders a real-time intelligence map of their workforce—who knows what, who’s ready, and where the gaps are—and then closes those gaps automatically with short, targeted coaching in WhatsApp, Teams, and web." />
   <link rel="icon" href="https://beeline.life/favicons/favicon.ico" />
 
   <!-- Social cards -->
-  <meta property="og:title" content="Beeline Learn — Every employee gets an AI coach" />
-  <meta property="og:description" content="Train where work happens. Prove it in your KPIs. AI coaching, live skill maps, manager validation." />
+  <meta property="og:title" content="Beeline Learn — Workforce Intelligence & Daily AI Coaching" />
+  <meta property="og:description" content="See capability in real time. Close gaps automatically. Prove it in your KPIs." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://beelinelearn.com/" />
   <meta property="og:image" content="https://beeline.life/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts + Tailwind -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,51 +31,33 @@
               accent:{ light:'#FFD54F', DEFAULT:'#FFC107', dark:'#FFA000' },
               neutral:{ light:'#FAFAFA', DEFAULT:'#F5F5F5', dark:'#E0E0E0', text:'#212121', subtext:'#757575' },
               success:{ light:'#81C784', DEFAULT:'#4CAF50', dark:'#388E3C' },
-              danger:{ light:'#E57373', DEFAULT:'#F44336', dark:'#D32F2F' },
-              warning:{ light:'#FFB74D', DEFAULT:'#FF9800', dark:'#F57C00' },
               info:{ light:'#64B5F6', DEFAULT:'#2196F3', dark:'#1976D2' },
-              error:{ light:'#EF9A9A', DEFAULT:'#E57373', dark:'#C62828' },
             }
+          },
+          boxShadow: {
+            soft: '0 6px 24px rgba(33,33,33,.06)',
+            card: '0 10px 30px rgba(33,33,33,.08)'
           }
         }
       }
     }
   </script>
 
-  <!-- Custom styles -->
+  <!-- Minimal custom CSS (light mode, no heavy effects) -->
   <style>
     :root{
       --pri:#FF914D;--priL:#FFDE59;--priD:#FF6D00;
-      --sec:#FB8C00;--acc:#FFC107;
-      --text:#212121;--sub:#757575;
-      --bg:#0B0B0B;--glass:rgba(255,255,255,.06);
+      --acc:#FFC107;--txt:#212121;--sub:#757575;--bg:#FFFFFF;--muted:#F7F7F7;
     }
-    html,body{height:100%}
-    body{
-      font-family: Inter,system-ui,sans-serif;color:#fff;
-      background:
-        radial-gradient(1000px 600px at 85% -10%, rgba(255,145,77,.22), transparent 60%),
-        radial-gradient(900px 600px at 10% 110%, rgba(255,193,7,.18), transparent 60%),
-        linear-gradient(180deg,#0C0C0C,#0A0A0A 65%);
-    }
-    .glass{background:var(--glass);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12)}
-    .ringy{box-shadow:0 10px 28px rgba(255,145,77,.25), inset 0 0 0 1px rgba(255,255,255,.08)}
-    .btn{display:inline-block;padding:.9rem 1.15rem;border-radius:12px;font-weight:900;letter-spacing:.2px}
-    .btn-primary{background:var(--pri);color:#000}.btn-primary:hover{background:var(--priL)}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.24)}
+    html,body{height:100%;background:var(--bg);color:var(--txt)}
+    .btn{display:inline-block;padding:.9rem 1.15rem;border-radius:12px;font-weight:800;letter-spacing:.2px}
+    .btn-primary{background:var(--pri);color:#111;box-shadow:0 8px 24px rgba(255,145,77,.25)}
+    .btn-primary:hover{background:var(--priL)}
+    .btn-ghost{background:#fff;border:1px solid #E6E6E6}
+    .badge{font-size:.72rem;font-weight:800;padding:.35rem .65rem;border-radius:999px}
     .gradText{background:linear-gradient(90deg,#4CAF50,#1976D2);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .blob{position:absolute;top:-140px;right:-120px;width:540px;height:540px;filter:blur(44px);opacity:.45;border-radius:40% 60% 55% 45%/45% 55% 45% 55%;
-      background:conic-gradient(from 180deg at 50% 50%, var(--pri), #A5B4FC, var(--acc), var(--pri));
-      animation:morph 16s ease-in-out infinite}
-    @keyframes morph{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-8%,4%) scale(1.06)}66%{transform:translate(-2%,-6%) scale(.98)}}
-    .reveal{opacity:0;transform:translateY(14px);transition:all .7s cubic-bezier(.2,.8,.2,1)}
+    .reveal{opacity:0;transform:translateY(12px);transition:all .6s cubic-bezier(.2,.8,.2,1)}
     .reveal.visible{opacity:1;transform:none}
-    .dash{stroke-dasharray:6 10;animation:dash 12s linear infinite}
-    @keyframes dash{to{stroke-dashoffset:-160}}
-    .marquee{display:flex;gap:2.5rem;animation:scroll 26s linear infinite;white-space:nowrap}
-    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .grid-overlay{background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;
-      opacity:.5;pointer-events:none;mask-image:linear-gradient(to bottom,rgba(0,0,0,.35),transparent 70%)}
   </style>
 
   <!-- Cred schema -->
@@ -84,253 +66,247 @@
   </script>
 </head>
 
-<body class="selection:bg-[var(--priL)] selection:text-black">
-  <!-- Top ribbon -->
-  <div class="w-full text-center text-xs md:text-sm font-extrabold text-black bg-[var(--pri)] py-2">
-    🐝 Our 2026 site is rolling out — you’re seeing the live preview.
+<body class="selection:bg-beeline-primary-light selection:text-black">
+  <!-- Slim notice -->
+  <div class="w-full text-center text-xs md:text-sm font-semibold text-[#111] bg-beeline.primary/10 py-2"
+       style="background-color:#FFF3E8">
+    Beeline Learn — new site rolling out for 2026 • You’re viewing the live preview
   </div>
 
-  <!-- Nav -->
-  <nav class="sticky top-0 z-40 glass">
+  <!-- Top Nav (clean, light) -->
+  <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-[#eee]">
     <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="h-8 w-8 rounded-lg" style="background:linear-gradient(135deg,var(--pri),var(--acc))"></div>
         <span class="font-black tracking-tight">Beeline Learn</span>
       </div>
-      <div class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#why" class="hover:text-[var(--pri)]">Why</a>
-        <a href="#how" class="hover:text-[var(--pri)]">How</a>
-        <a href="#offer" class="hover:text-[var(--pri)]">Offer</a>
-        <a href="#faq" class="hover:text-[var(--pri)]">FAQ</a>
+      <div class="hidden md:flex items-center gap-6 text-sm text-[var(--sub)]">
+        <a href="#leaders" class="hover:text-[var(--priD)]">For Leaders</a>
+        <a href="#how" class="hover:text-[var(--priD)]">How it works</a>
+        <a href="#proof" class="hover:text-[var(--priD)]">Proof</a>
+        <a href="#faq" class="hover:text-[var(--priD)]">FAQ</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="https://beeline.life" target="_blank" class="text-sm underline underline-offset-4 decoration-[var(--acc)] hover:text-[var(--pri)]">Main platform</a>
-        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">Book a demo</a>
+        <a href="https://beeline.life" target="_blank" class="text-sm underline underline-offset-4 decoration-[var(--acc)]">Main platform</a>
+        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary">Book a demo</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="relative overflow-clip">
-    <div class="blob"></div>
-    <div class="grid-overlay absolute inset-0"></div>
-    <section class="max-w-7xl mx-auto px-6 pt-16 pb-18">
+  <!-- HERO — C-suite first, then the coach -->
+  <header class="bg-white">
+    <section class="max-w-7xl mx-auto px-6 pt-14 pb-10">
       <div class="text-center">
-        <div class="inline-flex items-center gap-2 text-[10px] md:text-xs font-extrabold text-black bg-[var(--priL)] px-3 py-1 rounded-full mb-5 ringy">
-          <span class="h-1.5 w-1.5 rounded-full bg-[var(--priD)]"></span> Train where work happens — prove it in your KPIs
+        <div class="inline-flex items-center gap-2 badge" style="background:#FFF6CC;color:#8A6D00;border:1px solid #F4E39A">
+          Real-time workforce intelligence
         </div>
-        <h1 class="text-4xl md:text-6xl font-black leading-tight md:leading-[1.05]">
-          Every employee gets an <span class="gradText">AI coach</span>.
+        <h1 class="text-4xl md:text-6xl font-black leading-[1.05] mt-4 text-[#0f0f0f]">
+          See capability across your workforce.<br class="hidden md:block" />
+          <span class="">Close the gaps automatically.</span>
         </h1>
-        <p class="mt-4 text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
-          We show what your people can do, where the gaps are, and automatically help them get better —
-          delivered in WhatsApp, Teams, and web with <span style="color:var(--priL)">real proof of capability</span>.
+        <p class="mt-4 text-lg md:text-xl text-[var(--sub)] max-w-3xl mx-auto">
+          Beeline gives leaders a live intelligence map of skills, readiness, and performance—who knows what, who’s ready, and what’s holding execution back.
+          When gaps appear, Beeline deploys targeted coaching in the tools people already use.
         </p>
+
+        <!-- Secondary promise to employees -->
+        <div class="mt-3 text-sm text-[#333]">
+          <span class="badge" style="background:#EAF5EA;color:#215E2D;border:1px solid #CDEACE">A personal trainer in every pocket</span>
+          <span class="text-[var(--sub)]"> — short, daily nudges that make people better at their jobs.</span>
+        </div>
+
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">See Beeline in action</a>
+          <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary">See Beeline in action</a>
           <a href="#how" class="btn btn-ghost">How it works</a>
         </div>
-        <div class="mt-6 text-xs text-white/70">Frontline-first • WhatsApp-native delivery • Audit-ready evidence</div>
+
+        <div class="mt-6 text-xs text-[var(--sub)]">
+          WhatsApp • Microsoft Teams • Web • On-site validations
+        </div>
       </div>
     </section>
   </header>
 
-  <!-- WHY (3 value pillars) -->
-  <section id="why" class="max-w-7xl mx-auto px-6 py-12 md:py-16">
-    <div class="grid md:grid-cols-3 gap-6">
-      <article class="glass rounded-xl p-6 reveal ringy">
-        <h3 class="text-xl font-extrabold mb-2" style="color:var(--priL)">Completion that sticks</h3>
-        <p class="text-white/85">Five-minute lessons in WhatsApp or Teams. Zero friction. 90%+ engagement.</p>
+  <!-- Leaders (3 quick wins) -->
+  <section id="leaders" class="bg-[var(--muted)] py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-xl p-6 shadow-soft reveal border border-[#eee]">
+        <h3 class="text-lg font-extrabold mb-1" style="color:#1a1a1a">Know exactly where you stand</h3>
+        <p class="text-[var(--sub)]">Live capability map. Who’s ready now, who’s close, and why.</p>
       </article>
-      <article class="glass rounded-xl p-6 reveal ringy">
-        <h3 class="text-xl font-extrabold mb-2" style="color:var(--priL)">Proof of capability</h3>
-        <p class="text-white/85">Live skill profiles and manager checks. Evidence, not guesses. Audit-ready by default.</p>
+      <article class="bg-white rounded-xl p-6 shadow-soft reveal border border-[#eee]">
+        <h3 class="text-lg font-extrabold mb-1">Move the KPIs</h3>
+        <p class="text-[var(--sub)]">Outcome-first coaching that turns goals into skills—measured in the numbers.</p>
       </article>
-      <article class="glass rounded-xl p-6 reveal ringy">
-        <h3 class="text-xl font-extrabold mb-2" style="color:var(--priL)">Personal coaching</h3>
-        <p class="text-white/85">AI tailors next-best lessons & spaced refreshers to close real performance gaps.</p>
+      <article class="bg-white rounded-xl p-6 shadow-soft reveal border border-[#eee]">
+        <h3 class="text-lg font-extrabold mb-1">Roll out in days</h3>
+        <p class="text-[var(--sub)]">Five-minute lessons in WhatsApp/Teams. Zero friction; 90%+ engagement.</p>
       </article>
     </div>
   </section>
 
-  <!-- HOW (loop) -->
-  <section id="how" class="max-w-7xl mx-auto px-6 pb-10 md:pb-16">
-    <div class="text-center mb-8">
-      <h2 class="text-3xl md:text-4xl font-black">Identify → Coach → Measure → Improve</h2>
-      <p class="opacity-80 mt-2">One loop. Training that shows up on the scoreboard.</p>
-    </div>
+  <!-- How it works -->
+  <section id="how" class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-black text-[#0f0f0f]">Identify → Coach → Measure → Improve</h2>
+        <p class="text-[var(--sub)] mt-2">One simple loop that ties training to outcomes.</p>
+      </div>
 
-    <div class="glass rounded-2xl p-6 md:p-10 reveal ringy">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <ul class="space-y-4 leading-relaxed">
-            <li><span style="color:var(--pri)">Identify:</span> Goals, SOPs, KPIs, manager checks & on-the-job evidence feed a live skills map.</li>
-            <li><span style="color:var(--pri)">Coach:</span> AI delivers 5–10 min micro-lessons & nudges in the tools people already use.</li>
-            <li><span style="color:var(--pri)">Measure:</span> Capability proven with evidence; leaders see who’s ready now — and why.</li>
-            <li><span style="color:var(--pri)">Improve:</span> The system learns what works and updates plans automatically.</li>
-          </ul>
-          <div class="mt-6 flex gap-3">
-            <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">Start a 30-day pilot</a>
-            <a href="https://beeline.life" target="_blank" class="btn btn-ghost">Visit main platform</a>
+      <div class="bg-white rounded-2xl border border-[#eee] p-6 md:p-10 shadow-card reveal">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <ul class="space-y-4 leading-relaxed text-[var(--txt)]">
+              <li><b style="color:var(--priD)">Identify.</b> Goals, SOPs, KPIs, manager checks & on-the-job evidence feed a live skills map.</li>
+              <li><b style="color:var(--priD)">Coach.</b> AI delivers 5–10 min micro-lessons and nudges inside WhatsApp, Teams, and web.</li>
+              <li><b style="color:var(--priD)">Measure.</b> Capability proven with evidence—see readiness and root-cause insights.</li>
+              <li><b style="color:var(--priD)">Improve.</b> The system learns what works and updates plans automatically.</li>
+            </ul>
+
+            <div class="mt-6 flex gap-3">
+              <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary">Start a 30-day pilot</a>
+              <a href="https://beeline.life" target="_blank" class="btn btn-ghost">Visit main platform</a>
+            </div>
+          </div>
+
+          <!-- Minimal diagram (clean, light) -->
+          <div class="relative">
+            <svg viewBox="0 0 360 360" class="w-full">
+              <defs>
+                <linearGradient id="lg" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#FFDE59"/>
+                  <stop offset="100%" stop-color="#FFC107"/>
+                </linearGradient>
+              </defs>
+              <circle cx="180" cy="180" r="130" fill="none" stroke="url(#lg)" stroke-width="8" stroke-linecap="round"
+                      style="stroke-dasharray:6 10; animation:dash 12s linear infinite"/>
+              <g font-size="13" text-anchor="middle" fill="#333">
+                <circle cx="180" cy="45" r="14" fill="#FF914D"></circle><text x="180" y="80">Identify</text>
+                <circle cx="315" cy="180" r="14" fill="#FFC107"></circle><text x="315" y="215">Coach</text>
+                <circle cx="180" cy="315" r="14" fill="#FF914D"></circle><text x="180" y="350">Measure</text>
+                <circle cx="45"  cy="180" r="14" fill="#FFC107"></circle><text x="45"  y="215">Improve</text>
+              </g>
+            </svg>
           </div>
         </div>
-
-        <!-- Animated loop -->
-        <div class="relative">
-          <svg viewBox="0 0 360 360" class="w-full">
-            <defs>
-              <linearGradient id="lg" x1="0" x2="1">
-                <stop offset="0%" stop-color="#FFDE59"/>
-                <stop offset="100%" stop-color="#FFC107"/>
-              </linearGradient>
-            </defs>
-            <circle cx="180" cy="180" r="130" fill="none" stroke="url(#lg)" stroke-width="10" class="dash"/>
-            <g font-size="14" text-anchor="middle" fill="#ffffff">
-              <circle cx="180" cy="45" r="16" fill="#FF914D"></circle>
-              <text x="180" y="85">Identify</text>
-              <circle cx="315" cy="180" r="16" fill="#FFC107"></circle>
-              <text x="315" y="220">Coach</text>
-              <circle cx="180" cy="315" r="16" fill="#FF914D"></circle>
-              <text x="180" y="355">Measure</text>
-              <circle cx="45" cy="180" r="16" fill="#FFC107"></circle>
-              <text x="45" y="220">Improve</text>
-            </g>
-          </svg>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- PROOF strip -->
-  <section class="py-10" id="proof">
+  <!-- Proof strip -->
+  <section id="proof" class="bg-[var(--muted)] py-10">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-white/70 text-sm mb-3">Built for frontline-first teams</div>
-      <div class="glass rounded-xl p-4 ringy overflow-hidden">
-        <div class="marquee">
+      <div class="text-[var(--sub)] text-sm mb-3">Built for frontline-first teams</div>
+      <div class="bg-white rounded-xl p-4 shadow-soft border border-[#eee] overflow-hidden">
+        <div class="flex gap-8 whitespace-nowrap animate-[marquee_26s_linear_infinite] text-[var(--sub)]">
           <span>• Field Sales • Franchise Ops • Healthcare • Distributed Standards • Compliance-heavy roles •</span>
           <span>• High-turnover teams • On-site coaching • WhatsApp native • Live capability map •</span>
           <span>• Field Sales • Franchise Ops • Healthcare • Distributed Standards • Compliance-heavy roles •</span>
-          <span>• High-turnover teams • On-site coaching • WhatsApp native • Live capability map •</span>
         </div>
       </div>
     </div>
   </section>
+  <style>@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
 
-  <!-- GRAND SLAM OFFER (concise, no overwhelm) -->
-  <section id="offer" class="max-w-7xl mx-auto px-6 pb-16">
-    <div class="text-center mb-8">
-      <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-extrabold border border-white/20">
-        The Grand-Slam Offer
-      </div>
-      <h2 class="text-3xl md:text-4xl font-black mt-3">Start with results. Scale with confidence.</h2>
-      <p class="opacity-80 mt-2 max-w-3xl mx-auto">Engineered to be the obvious choice for serious operators.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Starter -->
-      <div class="glass rounded-2xl p-6 ringy">
-        <h3 class="text-xl font-black mb-1">Starter</h3>
-        <p class="text-white/80 text-sm mb-4">Prove value fast on one team.</p>
-        <ul class="text-sm space-y-2 mb-5">
-          <li>✅ WhatsApp micro-lessons</li>
-          <li>✅ 1 skills map + manager checks</li>
-          <li>✅ Pilot dashboards</li>
-        </ul>
-        <div class="text-3xl font-black mb-4" style="color:var(--priL)">R45k / month</div>
-        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-ghost w-full text-center">Book a call</a>
+  <!-- Offer (simple, light) -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <div class="text-center mb-8">
+        <div class="badge" style="background:#FFF6E9;color:#7A3D12;border:1px solid #F7D1B4">The offer</div>
+        <h2 class="text-3xl md:text-4xl font-black mt-3">Start with results. Scale with confidence.</h2>
+        <p class="text-[var(--sub)] mt-2">90-day improvement guarantee.</p>
       </div>
 
-      <!-- Most Popular -->
-      <div class="rounded-2xl p-6 ringy relative" style="background:linear-gradient(135deg,var(--pri),var(--sec));">
-        <div class="absolute -top-3 right-4 bg-black text-white text-xs font-black px-3 py-1 rounded-full">MOST POPULAR</div>
-        <div class="relative z-10">
-          <h3 class="text-xl font-black mb-1 text-black">Growth</h3>
-          <p class="text-black/80 text-sm mb-4">Multi-team rollout + measurable KPIs.</p>
-          <ul class="text-sm space-y-2 mb-5 text-black">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-[#eee] shadow-soft">
+          <h3 class="text-xl font-black mb-1">Starter</h3>
+          <p class="text-[var(--sub)] text-sm mb-4">Prove value fast on one team.</p>
+          <ul class="text-sm space-y-2 mb-5 text-[#333]">
+            <li>✅ WhatsApp micro-lessons</li>
+            <li>✅ 1 skills map + manager checks</li>
+            <li>✅ Pilot dashboards</li>
+          </ul>
+          <div class="text-3xl font-black mb-4" style="color:var(--priD)">R45k / month</div>
+          <a href="https://beeline.life/#demo" target="_blank" class="btn btn-ghost w-full text-center">Book a call</a>
+        </div>
+
+        <div class="rounded-2xl p-6 border border-[#f2bf9f] shadow-card"
+             style="background:linear-gradient(135deg,#FFDE59,#FFB46B)">
+          <div class="text-xs font-black bg-black/80 text-white px-3 py-1 rounded-full inline-block mb-3">Most Popular</div>
+          <h3 class="text-xl font-black mb-1 text-[#111]">Growth</h3>
+          <p class="text-[#222]/80 text-sm mb-4">Multi-team rollout + measurable KPIs.</p>
+          <ul class="text-sm space-y-2 mb-5 text-[#111]">
             <li>✅ Everything in Starter</li>
             <li>✅ Multi-team capability map</li>
             <li>✅ Manager validation flows</li>
             <li>✅ Weekly performance loops</li>
           </ul>
-          <div class="text-3xl font-black mb-4">R95k / month</div>
+          <div class="text-3xl font-black mb-4 text-[#111]">R95k / month</div>
           <a href="https://beeline.life/#demo" target="_blank" class="btn bg-black text-white w-full text-center">Start a 30-day pilot</a>
-          <p class="text-[11px] mt-2 text-black/80">If we don’t move a KPI in 90 days, you don’t pay months 4–6.</p>
+          <p class="text-[11px] mt-2 text-[#222]">If we don’t move a KPI in 90 days, you don’t pay months 4–6.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-[#eee] shadow-soft">
+          <h3 class="text-xl font-black mb-1">Enterprise</h3>
+          <p class="text-[var(--sub)] text-sm mb-4">Scale across regions with controls.</p>
+          <ul class="text-sm space-y-2 mb-5 text-[#333]">
+            <li>✅ SSO & audit pack</li>
+            <li>✅ Custom analytics & data feeds</li>
+            <li>✅ Dedicated performance consultant</li>
+          </ul>
+          <div class="text-3xl font-black mb-4" style="color:var(--priD)">Custom</div>
+          <a href="https://beeline.life/#demo" target="_blank" class="btn btn-ghost w-full text-center">Talk to sales</a>
         </div>
       </div>
 
-      <!-- Enterprise -->
-      <div class="glass rounded-2xl p-6 ringy">
-        <h3 class="text-xl font-black mb-1">Enterprise</h3>
-        <p class="text-white/80 text-sm mb-4">Scale across regions with controls.</p>
-        <ul class="text-sm space-y-2 mb-5">
-          <li>✅ SSO, SSO-provisioning, audit pack</li>
-          <li>✅ Custom analytics & data feeds</li>
-          <li>✅ Dedicated performance consultant</li>
-        </ul>
-        <div class="text-3xl font-black mb-4" style="color:var(--priL)">Custom</div>
-        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-ghost w-full text-center">Talk to sales</a>
-      </div>
-    </div>
-
-    <!-- Risk reversal -->
-    <div class="text-center mt-8">
-      <div class="inline-flex items-center bg-[rgba(76,175,80,.12)] border border-[rgba(76,175,80,.35)] rounded-2xl px-5 py-3">
-        <span class="font-black mr-2" style="color:#4CAF50">Guarantee:</span>
-        <span class="text-white/90">Measurable workforce improvement in 90 days — or you don’t pay months 4–6.</span>
+      <div class="text-center mt-8">
+        <div class="inline-flex items-center gap-2 rounded-2xl px-5 py-3"
+             style="background:#EAF5EA;border:1px solid #CDEACE;color:#1C6A29">
+          <strong>Guarantee:</strong> Measurable workforce improvement in 90 days — or you don’t pay months 4–6.
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="max-w-6xl mx-auto px-6 pb-16">
-    <h2 class="text-3xl font-black mb-6">Quick answers</h2>
-    <div class="grid md:grid-cols-2 gap-5">
-      <div class="glass rounded-xl p-5 reveal ringy">
-        <h3 class="font-extrabold mb-2" style="color:var(--priL)">Is this an LMS?</h3>
-        <p class="text-white/85">No. It’s a performance engine with daily coaching and verifiable capability. Keep your content — we’ll make it work.</p>
-      </div>
-      <div class="glass rounded-xl p-5 reveal ringy">
-        <h3 class="font-extrabold mb-2" style="color:var(--priL)">Where does it run?</h3>
-        <p class="text-white/85">WhatsApp, Teams, and our app/web. Train where work happens; adoption follows.</p>
-      </div>
-      <div class="glass rounded-xl p-5 reveal ringy">
-        <h3 class="font-extrabold mb-2" style="color:var(--priL)">What results should we expect?</h3>
-        <p class="text-white/85">Faster ramp, fewer errors, lower cost. Managers see who’s ready now and what to fix next.</p>
-      </div>
-      <div class="glass rounded-xl p-5 reveal ringy">
-        <h3 class="font-extrabold mb-2" style="color:var(--priL)">How fast to start?</h3>
-        <p class="text-white/85">Days, not months. Drop in goals/SOPs; Beeline builds targeted lessons automatically.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="relative py-16">
-    <div class="blob" style="top:auto;bottom:-140px;right:auto;left:-120px;opacity:.35"></div>
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-black">Train in WhatsApp. <span style="color:var(--priL)">Prove it</span> in your KPIs.</h2>
-      <p class="opacity-85 mt-2">Outcome-driven coaching that moves numbers, not just completions.</p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">Start a 30-day pilot</a>
-        <a href="https://beeline.life" target="_blank" class="btn btn-ghost">Visit main platform</a>
+  <section id="faq" class="bg-[var(--muted)]">
+    <div class="max-w-6xl mx-auto px-6 py-14">
+      <h2 class="text-3xl font-black mb-6 text-[#0f0f0f]">Quick answers</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white rounded-xl p-6 border border-[#eee] shadow-soft reveal">
+          <h3 class="font-extrabold mb-2" style="color:#1a1a1a">Is this an LMS?</h3>
+          <p class="text-[var(--sub)]">No. It’s a performance engine with daily coaching and verifiable capability.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-[#eee] shadow-soft reveal">
+          <h3 class="font-extrabold mb-2" style="color:#1a1a1a">Where does it run?</h3>
+          <p class="text-[var(--sub)]">WhatsApp, Teams, and web. Train where work happens; adoption follows.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-[#eee] shadow-soft reveal">
+          <h3 class="font-extrabold mb-2" style="color:#1a1a1a">What results should we expect?</h3>
+          <p class="text-[var(--sub)]">Faster ramp, fewer errors, lower cost. Managers see who’s ready and what to fix next.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-[#eee] shadow-soft reveal">
+          <h3 class="font-extrabold mb-2" style="color:#1a1a1a">How fast to start?</h3>
+          <p class="text-[var(--sub)]">Days, not months. Drop in goals/SOPs; Beeline builds targeted lessons automatically.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-white/80">
+  <footer class="bg-white border-t border-[#eee]">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-[var(--sub)]">
       <div>© 2025 Beeline Learn (Pty) Ltd — Cape Town, South Africa</div>
       <div class="flex gap-4">
-        <a class="hover:text-[var(--priL)]" href="#why">Why</a>
-        <a class="hover:text-[var(--priL)]" href="#how">How</a>
-        <a class="hover:text-[var(--priL)]" href="#offer">Offer</a>
-        <a class="hover:text-[var(--priL)]" href="mailto:hello@beelinelearn.com">Contact</a>
+        <a class="hover:text-[var(--priD)]" href="#leaders">For Leaders</a>
+        <a class="hover:text-[var(--priD)]" href="#how">How</a>
+        <a class="hover:text-[var(--priD)]" href="#faq">FAQ</a>
+        <a class="hover:text-[var(--priD)]" href="mailto:hello@beelinelearn.com">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- Reveal on scroll -->
+  <!-- Reveal on scroll (tiny) -->
   <script>
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.15});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
