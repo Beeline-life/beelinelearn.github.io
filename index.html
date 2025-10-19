@@ -1,103 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beeline Learn | Workforce Intelligence Software</title>
-    <meta
-      name="description"
-      content="Beeline is workforce intelligence software that shows what your people can do, where the gaps are, and automatically helps them get better. AI coaching, real-time skill mapping, and measurable performance—delivered through WhatsApp, Teams, and web."
-    />
-    <link rel="icon" href="https://beeline.life/favicons/favicon.ico" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      html { scroll-behavior: smooth; }
-      body { font-family: 'Inter', sans-serif; background: #fafafa; color: #111; }
-      .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-      .visible { opacity: 1; transform: translateY(0); }
-    </style>
-  </head>
-  <body class="flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="w-full py-4 bg-yellow-400 text-center font-semibold text-sm">
-      🚀 Beeline Learn — Our new site for 2026. You’re early. Explore below.
-    </header>
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beeline Learn — Every employee gets an AI coach</title>
+  <meta name="description" content="Beeline is workforce intelligence software that shows what your people can do, where the gaps are, and automatically helps them get better—delivered in WhatsApp, Teams, and web, with proof that shows up in your KPIs." />
+  <link rel="icon" href="https://beeline.life/favicons/favicon.ico" />
 
-    <!-- Hero -->
-    <section id="hero" class="flex-1 flex flex-col justify-center items-center text-center px-6 py-20">
-      <h1 class="text-4xl md:text-5xl font-bold mb-3 fade-in">Every employee gets an AI coach.</h1>
-      <p class="text-lg md:text-xl text-gray-600 mb-8 fade-in" style="transition-delay:0.2s">
-        Delivered in WhatsApp, Teams, or web. 90% completion. Proof of capability.
-      </p>
-      <div class="flex gap-4 fade-in" style="transition-delay:0.4s">
-        <a href="https://beeline.life" target="_blank"
-          class="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition">
-          Visit Main Platform
-        </a>
-        <a href="https://beeline.life/#demo" target="_blank"
-          class="bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition">
-          Book a Demo
-        </a>
-      </div>
-    </section>
+  <!-- Social cards -->
+  <meta property="og:title" content="Beeline Learn — Every employee gets an AI coach" />
+  <meta property="og:description" content="Train where work happens. Prove it in your KPIs. AI coaching, live skill maps, manager validation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beelinelearn.com/" />
+  <meta property="og:image" content="https://beeline.life/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- What We Do -->
-    <section id="about" class="max-w-4xl mx-auto text-center px-6 py-20 fade-in">
-      <h2 class="text-3xl font-bold mb-4">What Beeline Does</h2>
-      <p class="text-gray-700 leading-relaxed">
-        Beeline is workforce intelligence software that shows you exactly what your people know and can do—right now.
-        It creates a live skills profile for every employee, tracking competencies, performance gaps, and readiness across your organisation.
-        When gaps appear, the system automatically delivers personalised micro-training through WhatsApp or Teams to close them.
-        Leaders get a real-time capability map of their workforce; employees get a personal trainer in their pocket that makes them better at their jobs, five minutes at a time.
-      </p>
-    </section>
-
-    <!-- 3 Value Blocks -->
-    <section id="value" class="bg-white py-20">
-      <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
-        <div class="fade-in">
-          <h3 class="font-semibold text-xl mb-2">Completion that sticks</h3>
-          <p class="text-gray-600">Five-minute WhatsApp lessons, frictionless rollout, and 90% engagement.</p>
-        </div>
-        <div class="fade-in">
-          <h3 class="font-semibold text-xl mb-2">Proof of capability</h3>
-          <p class="text-gray-600">Live skill profiles and manager validations—evidence, not guesses.</p>
-        </div>
-        <div class="fade-in">
-          <h3 class="font-semibold text-xl mb-2">Personal coaching</h3>
-          <p class="text-gray-600">AI-tailored next steps that build real-world performance, every day.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="py-20 text-center fade-in">
-      <h2 class="text-3xl font-bold mb-3">Train where work happens. Prove it in your KPIs.</h2>
-      <p class="text-gray-700 mb-6">Ready to make training that moves the numbers?</p>
-      <a href="https://beeline.life/#demo" target="_blank"
-        class="bg-yellow-400 text-black px-8 py-4 rounded-md font-semibold hover:bg-yellow-500 transition">
-        See Beeline in Action
-      </a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-50 text-center py-6 text-sm text-gray-600 border-t">
-      © 2025 Beeline Learn (Pty) Ltd — Cape Town, South Africa
-    </footer>
-
-    <!-- Scroll Animations -->
-    <script>
-      const elements = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+  <!-- Fonts + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          colors: {
+            beeline: {
+              primary:{ light:'#FFDE59', DEFAULT:'#FF914D', dark:'#FF6D00' },
+              secondary:{ light:'#FFA726', DEFAULT:'#FB8C00', dark:'#EF6C00' },
+              accent:{ light:'#FFD54F', DEFAULT:'#FFC107', dark:'#FFA000' },
+              neutral:{ light:'#FAFAFA', DEFAULT:'#F5F5F5', dark:'#E0E0E0', text:'#212121', subtext:'#757575' },
+              success:{ light:'#81C784', DEFAULT:'#4CAF50', dark:'#388E3C' },
+              danger:{ light:'#E57373', DEFAULT:'#F44336', dark:'#D32F2F' },
+              warning:{ light:'#FFB74D', DEFAULT:'#FF9800', dark:'#F57C00' },
+              info:{ light:'#64B5F6', DEFAULT:'#2196F3', dark:'#1976D2' },
+              error:{ light:'#EF9A9A', DEFAULT:'#E57373', dark:'#C62828' },
+            }
           }
-        });
-      });
-      elements.forEach(el => observer.observe(el));
-    </script>
-  </body>
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom styles -->
+  <style>
+    :root{
+      --pri:#FF914D;--priL:#FFDE59;--priD:#FF6D00;
+      --sec:#FB8C00;--acc:#FFC107;
+      --text:#212121;--sub:#757575;
+      --bg:#0B0B0B;--glass:rgba(255,255,255,.06);
+    }
+    html,body{height:100%}
+    body{
+      font-family: Inter,system-ui,sans-serif;color:#fff;
+      background:
+        radial-gradient(1000px 600px at 85% -10%, rgba(255,145,77,.22), transparent 60%),
+        radial-gradient(900px 600px at 10% 110%, rgba(255,193,7,.18), transparent 60%),
+        linear-gradient(180deg,#0C0C0C,#0A0A0A 65%);
+    }
+    .glass{background:var(--glass);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12)}
+    .ringy{box-shadow:0 10px 28px rgba(255,145,77,.25), inset 0 0 0 1px rgba(255,255,255,.08)}
+    .btn{display:inline-block;padding:.9rem 1.15rem;border-radius:12px;font-weight:900;letter-spacing:.2px}
+    .btn-primary{background:var(--pri);color:#000}.btn-primary:hover{background:var(--priL)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.24)}
+    .gradText{background:linear-gradient(90deg,#4CAF50,#1976D2);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .blob{position:absolute;top:-140px;right:-120px;width:540px;height:540px;filter:blur(44px);opacity:.45;border-radius:40% 60% 55% 45%/45% 55% 45% 55%;
+      background:conic-gradient(from 180deg at 50% 50%, var(--pri), #A5B4FC, var(--acc), var(--pri));
+      animation:morph 16s ease-in-out infinite}
+    @keyframes morph{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-8%,4%) scale(1.06)}66%{transform:translate(-2%,-6%) scale(.98)}}
+    .reveal{opacity:0;transform:translateY(14px);transition:all .7s cubic-bezier(.2,.8,.2,1)}
+    .reveal.visible{opacity:1;transform:none}
+    .dash{stroke-dasharray:6 10;animation:dash 12s linear infinite}
+    @keyframes dash{to{stroke-dashoffset:-160}}
+    .marquee{display:flex;gap:2.5rem;animation:scroll 26s linear infinite;white-space:nowrap}
+    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .grid-overlay{background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;
+      opacity:.5;pointer-events:none;mask-image:linear-gradient(to bottom,rgba(0,0,0,.35),transparent 70%)}
+  </style>
+
+  <!-- Cred schema -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Beeline Learn (Pty) Ltd","url":"https://beelinelearn.com","logo":"https://beeline.life/favicons/favicon.ico","address":{"@type":"PostalAddress","addressLocality":"Cape Town","addressCountry":"ZA"}}
+  </script>
+</head>
+
+<body class="selection:bg-[var(--priL)] selection:text-black">
+  <!-- Top ribbon -->
+  <div class="w-full text-center text-xs md:text-sm font-extrabold text-black bg-[var(--pri)] py-2">
+    🐝 Our 2026 site is rolling out — you’re seeing the live preview.
+  </div>
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-40 glass">
+    <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-lg" style="background:linear-gradient(135deg,var(--pri),var(--acc))"></div>
+        <span class="font-black tracking-tight">Beeline Learn</span>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#why" class="hover:text-[var(--pri)]">Why</a>
+        <a href="#how" class="hover:text-[var(--pri)]">How</a>
+        <a href="#offer" class="hover:text-[var(--pri)]">Offer</a>
+        <a href="#faq" class="hover:text-[var(--pri)]">FAQ</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://beeline.life" target="_blank" class="text-sm underline underline-offset-4 decoration-[var(--acc)] hover:text-[var(--pri)]">Main platform</a>
+        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">Book a demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="relative overflow-clip">
+    <div class="blob"></div>
+    <div class="grid-overlay absolute inset-0"></div>
+    <section class="max-w-7xl mx-auto px-6 pt-16 pb-18">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 text-[10px] md:text-xs font-extrabold text-black bg-[var(--priL)] px-3 py-1 rounded-full mb-5 ringy">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--priD)]"></span> Train where work happens — prove it in your KPIs
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black leading-tight md:leading-[1.05]">
+          Every employee gets an <span class="gradText">AI coach</span>.
+        </h1>
+        <p class="mt-4 text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+          We show what your people can do, where the gaps are, and automatically help them get better —
+          delivered in WhatsApp, Teams, and web with <span style="color:var(--priL)">real proof of capability</span>.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">See Beeline in action</a>
+          <a href="#how" class="btn btn-ghost">How it works</a>
+        </div>
+        <div class="mt-6 text-xs text-white/70">Frontline-first • WhatsApp-native delivery • Audit-ready evidence</div>
+      </div>
+    </section>
+  </header>
+
+  <!-- WHY (3 value pillars) -->
+  <section id="why" class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="glass rounded-xl p-6 reveal ringy">
+        <h3 class="text-xl font-extrabold mb-2" style="color:var(--priL)">Completion that sticks</h3>
+        <p class="text-white/85">Five-minute lessons in WhatsApp or Teams. Zero friction. 90%+ engagement.</p>
+      </article>
+      <article class="glass rounded-xl p-6 reveal ringy">
+        <h3 class="text-xl font-extrabold mb-2" style="color:var(--priL)">Proof of capability</h3>
+        <p class="text-white/85">Live skill profiles and manager checks. Evidence, not guesses. Audit-ready by default.</p>
+      </article>
+      <article class="glass rounded-xl p-6 reveal ringy">
+        <h3 class="text-xl font-extrabold mb-2" style="color:var(--priL)">Personal coaching</h3>
+        <p class="text-white/85">AI tailors next-best lessons & spaced refreshers to close real performance gaps.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW (loop) -->
+  <section id="how" class="max-w-7xl mx-auto px-6 pb-10 md:pb-16">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-black">Identify → Coach → Measure → Improve</h2>
+      <p class="opacity-80 mt-2">One loop. Training that shows up on the scoreboard.</p>
+    </div>
+
+    <div class="glass rounded-2xl p-6 md:p-10 reveal ringy">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <ul class="space-y-4 leading-relaxed">
+            <li><span style="color:var(--pri)">Identify:</span> Goals, SOPs, KPIs, manager checks & on-the-job evidence feed a live skills map.</li>
+            <li><span style="color:var(--pri)">Coach:</span> AI delivers 5–10 min micro-lessons & nudges in the tools people already use.</li>
+            <li><span style="color:var(--pri)">Measure:</span> Capability proven with evidence; leaders see who’s ready now — and why.</li>
+            <li><span style="color:var(--pri)">Improve:</span> The system learns what works and updates plans automatically.</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">Start a 30-day pilot</a>
+            <a href="https://beeline.life" target="_blank" class="btn btn-ghost">Visit main platform</a>
+          </div>
+        </div>
+
+        <!-- Animated loop -->
+        <div class="relative">
+          <svg viewBox="0 0 360 360" class="w-full">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1">
+                <stop offset="0%" stop-color="#FFDE59"/>
+                <stop offset="100%" stop-color="#FFC107"/>
+              </linearGradient>
+            </defs>
+            <circle cx="180" cy="180" r="130" fill="none" stroke="url(#lg)" stroke-width="10" class="dash"/>
+            <g font-size="14" text-anchor="middle" fill="#ffffff">
+              <circle cx="180" cy="45" r="16" fill="#FF914D"></circle>
+              <text x="180" y="85">Identify</text>
+              <circle cx="315" cy="180" r="16" fill="#FFC107"></circle>
+              <text x="315" y="220">Coach</text>
+              <circle cx="180" cy="315" r="16" fill="#FF914D"></circle>
+              <text x="180" y="355">Measure</text>
+              <circle cx="45" cy="180" r="16" fill="#FFC107"></circle>
+              <text x="45" y="220">Improve</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF strip -->
+  <section class="py-10" id="proof">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-white/70 text-sm mb-3">Built for frontline-first teams</div>
+      <div class="glass rounded-xl p-4 ringy overflow-hidden">
+        <div class="marquee">
+          <span>• Field Sales • Franchise Ops • Healthcare • Distributed Standards • Compliance-heavy roles •</span>
+          <span>• High-turnover teams • On-site coaching • WhatsApp native • Live capability map •</span>
+          <span>• Field Sales • Franchise Ops • Healthcare • Distributed Standards • Compliance-heavy roles •</span>
+          <span>• High-turnover teams • On-site coaching • WhatsApp native • Live capability map •</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRAND SLAM OFFER (concise, no overwhelm) -->
+  <section id="offer" class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-extrabold border border-white/20">
+        The Grand-Slam Offer
+      </div>
+      <h2 class="text-3xl md:text-4xl font-black mt-3">Start with results. Scale with confidence.</h2>
+      <p class="opacity-80 mt-2 max-w-3xl mx-auto">Engineered to be the obvious choice for serious operators.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Starter -->
+      <div class="glass rounded-2xl p-6 ringy">
+        <h3 class="text-xl font-black mb-1">Starter</h3>
+        <p class="text-white/80 text-sm mb-4">Prove value fast on one team.</p>
+        <ul class="text-sm space-y-2 mb-5">
+          <li>✅ WhatsApp micro-lessons</li>
+          <li>✅ 1 skills map + manager checks</li>
+          <li>✅ Pilot dashboards</li>
+        </ul>
+        <div class="text-3xl font-black mb-4" style="color:var(--priL)">R45k / month</div>
+        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-ghost w-full text-center">Book a call</a>
+      </div>
+
+      <!-- Most Popular -->
+      <div class="rounded-2xl p-6 ringy relative" style="background:linear-gradient(135deg,var(--pri),var(--sec));">
+        <div class="absolute -top-3 right-4 bg-black text-white text-xs font-black px-3 py-1 rounded-full">MOST POPULAR</div>
+        <div class="relative z-10">
+          <h3 class="text-xl font-black mb-1 text-black">Growth</h3>
+          <p class="text-black/80 text-sm mb-4">Multi-team rollout + measurable KPIs.</p>
+          <ul class="text-sm space-y-2 mb-5 text-black">
+            <li>✅ Everything in Starter</li>
+            <li>✅ Multi-team capability map</li>
+            <li>✅ Manager validation flows</li>
+            <li>✅ Weekly performance loops</li>
+          </ul>
+          <div class="text-3xl font-black mb-4">R95k / month</div>
+          <a href="https://beeline.life/#demo" target="_blank" class="btn bg-black text-white w-full text-center">Start a 30-day pilot</a>
+          <p class="text-[11px] mt-2 text-black/80">If we don’t move a KPI in 90 days, you don’t pay months 4–6.</p>
+        </div>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="glass rounded-2xl p-6 ringy">
+        <h3 class="text-xl font-black mb-1">Enterprise</h3>
+        <p class="text-white/80 text-sm mb-4">Scale across regions with controls.</p>
+        <ul class="text-sm space-y-2 mb-5">
+          <li>✅ SSO, SSO-provisioning, audit pack</li>
+          <li>✅ Custom analytics & data feeds</li>
+          <li>✅ Dedicated performance consultant</li>
+        </ul>
+        <div class="text-3xl font-black mb-4" style="color:var(--priL)">Custom</div>
+        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-ghost w-full text-center">Talk to sales</a>
+      </div>
+    </div>
+
+    <!-- Risk reversal -->
+    <div class="text-center mt-8">
+      <div class="inline-flex items-center bg-[rgba(76,175,80,.12)] border border-[rgba(76,175,80,.35)] rounded-2xl px-5 py-3">
+        <span class="font-black mr-2" style="color:#4CAF50">Guarantee:</span>
+        <span class="text-white/90">Measurable workforce improvement in 90 days — or you don’t pay months 4–6.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto px-6 pb-16">
+    <h2 class="text-3xl font-black mb-6">Quick answers</h2>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="glass rounded-xl p-5 reveal ringy">
+        <h3 class="font-extrabold mb-2" style="color:var(--priL)">Is this an LMS?</h3>
+        <p class="text-white/85">No. It’s a performance engine with daily coaching and verifiable capability. Keep your content — we’ll make it work.</p>
+      </div>
+      <div class="glass rounded-xl p-5 reveal ringy">
+        <h3 class="font-extrabold mb-2" style="color:var(--priL)">Where does it run?</h3>
+        <p class="text-white/85">WhatsApp, Teams, and our app/web. Train where work happens; adoption follows.</p>
+      </div>
+      <div class="glass rounded-xl p-5 reveal ringy">
+        <h3 class="font-extrabold mb-2" style="color:var(--priL)">What results should we expect?</h3>
+        <p class="text-white/85">Faster ramp, fewer errors, lower cost. Managers see who’s ready now and what to fix next.</p>
+      </div>
+      <div class="glass rounded-xl p-5 reveal ringy">
+        <h3 class="font-extrabold mb-2" style="color:var(--priL)">How fast to start?</h3>
+        <p class="text-white/85">Days, not months. Drop in goals/SOPs; Beeline builds targeted lessons automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="relative py-16">
+    <div class="blob" style="top:auto;bottom:-140px;right:auto;left:-120px;opacity:.35"></div>
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-black">Train in WhatsApp. <span style="color:var(--priL)">Prove it</span> in your KPIs.</h2>
+      <p class="opacity-85 mt-2">Outcome-driven coaching that moves numbers, not just completions.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://beeline.life/#demo" target="_blank" class="btn btn-primary ringy">Start a 30-day pilot</a>
+        <a href="https://beeline.life" target="_blank" class="btn btn-ghost">Visit main platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-white/80">
+      <div>© 2025 Beeline Learn (Pty) Ltd — Cape Town, South Africa</div>
+      <div class="flex gap-4">
+        <a class="hover:text-[var(--priL)]" href="#why">Why</a>
+        <a class="hover:text-[var(--priL)]" href="#how">How</a>
+        <a class="hover:text-[var(--priL)]" href="#offer">Offer</a>
+        <a class="hover:text-[var(--priL)]" href="mailto:hello@beelinelearn.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reveal on scroll -->
+  <script>
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
 </html>
