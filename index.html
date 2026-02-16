@@ -321,7 +321,7 @@
             <p class="text-gray-600 mb-10">Discover how Beeline adapts to different training scenarios.</p>
             <div class="grid sm:grid-cols-2 gap-6">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                    <img src="https://www.beeline.life/img/NewLandingPage/EveryNeed/beeline-solar-technician-partner-training-learn.png" alt="Employee onboarding" class="w-full h-48 object-cover">
+                    <img src="https://www.beeline.life/img/NewLandingPage/EveryNeed/beeline-solar-technician-partner-training-learn.png" alt="Employee onboarding" class="w-full h-48 object-cover object-top">
                     <div class="p-5">
                         <h3 class="font-semibold text-hive-900 mb-2">Employee Onboarding</h3>
                         <p class="text-gray-600 text-sm">Get new hires up to speed quickly with structured onboarding programs.</p>
@@ -359,8 +359,45 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-hive-900 mb-4">Global Footprint</h2>
                 <p class="text-gray-600">Empowering organisations with innovative training solutions worldwide.</p>
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative">
                 <img src="https://www.beeline.life/img/NewLandingPage/svgs/map.svg" alt="World map" class="w-full h-auto object-cover">
+                <!-- Location dots -->
+                <style>
+                    .map-dot {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background: #f59e0b;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        box-shadow: 0 0 0 3px rgba(245,158,11,0.3), 0 1px 3px rgba(0,0,0,0.15);
+                        transform: translate(-50%, -50%);
+                    }
+                    .map-dot-sm {
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        background: #fbbf24;
+                        border-radius: 50%;
+                        border: 1.5px solid white;
+                        box-shadow: 0 0 0 2px rgba(251,191,36,0.25);
+                        transform: translate(-50%, -50%);
+                    }
+                </style>
+                <!-- South Africa (Cape Town - HQ) -->
+                <div class="map-dot" style="left:54%;top:81%" title="Cape Town, South Africa"></div>
+                <!-- Johannesburg -->
+                <div class="map-dot-sm" style="left:55.5%;top:76%" title="Johannesburg, South Africa"></div>
+                <!-- Nigeria / West Africa -->
+                <div class="map-dot-sm" style="left:49%;top:55%" title="West Africa"></div>
+                <!-- Kenya / East Africa -->
+                <div class="map-dot-sm" style="left:57%;top:58%" title="East Africa"></div>
+                <!-- UAE / Middle East -->
+                <div class="map-dot-sm" style="left:62%;top:43%" title="Middle East"></div>
+                <!-- United Kingdom -->
+                <div class="map-dot-sm" style="left:47%;top:28%" title="United Kingdom"></div>
+                <!-- Mauritius -->
+                <div class="map-dot-sm" style="left:60%;top:74%" title="Mauritius"></div>
             </div>
         </div>
     </section>
